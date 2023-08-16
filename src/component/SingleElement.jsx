@@ -1,6 +1,7 @@
+import './SingleElement.scss';
 const SingleElement = ({ mockStorage }) => {
   return (
-    <div>
+    <div className="div-wrapper">
       {mockStorage.map((mockStorageObject, index) => {
         let title = mockStorageObject.heading;
         let items = Object.values(mockStorageObject.items);
