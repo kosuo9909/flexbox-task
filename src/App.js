@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import SingleElement from './component/SingleElement';
+
+const heading = 'Heading of some sort';
+const lorem = 'Lorem ipsum text';
+let mockParagraphs = [];
+for (let i = 0; i < 10; i++) {
+  mockParagraphs.push(lorem);
+}
+
+let mockStorage = [];
+
+for (let i = 0; i < 4; i++) {
+  mockStorage.push({ heading, items: mockParagraphs });
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SingleElement mockStorage={mockStorage} />
     </div>
   );
 }
