@@ -1,16 +1,19 @@
 import './SingleElement.scss';
 const SingleElement = ({ mockStorage }) => {
   return (
-    <div className="div-wrapper">
-      {mockStorage.map((mockStorageObject, index) => {
+    <div className='div-wrapper'>
+      {mockStorage.map((mockStorageObject, _index) => {
         let title = mockStorageObject.heading;
         let items = Object.values(mockStorageObject.items);
+        let fixedWidth = `${mockStorageObject.fixedWidth}px`;
         return (
-          <section>
+          <section style={{ minWidth: fixedWidth }}>
             <h1>{title}</h1>
-            {items.map((item) => (
-              <p>{item}</p>
-            ))}
+            <aside>
+              {items.map((item) => (
+                <p>{item}</p>
+              ))}
+            </aside>
           </section>
         );
       })}
