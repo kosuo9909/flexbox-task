@@ -15,10 +15,6 @@ let mockStorage = [
   { heading, items: mockParagraphs, fixedWidth: 300 },
 ];
 
-// for (let i = 0; i < 4; i++) {
-//   mockStorage.push({ heading, items: mockParagraphs });
-// }
-
 function App() {
   return (
     <div className='App'>
